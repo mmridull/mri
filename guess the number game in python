@@ -1,0 +1,19 @@
+class valuetosmall(Exception):
+  pass
+class valuetolarge(Exception):
+  pass
+
+num=10
+while(True):
+  var=int(input("enter any number"))
+  try:
+    if var<num:
+      raise valuetosmall
+    elif var>num:
+      raise valuetolarge
+    break
+  except valuetosmall:
+    print("value too small try again")
+  except valuetolarge:
+    print("value too large try again")
+print("congo you have guess correct number!!")
